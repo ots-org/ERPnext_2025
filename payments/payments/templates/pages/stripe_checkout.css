@@ -1,0 +1,101 @@
+.StripeElement {
+  background-color: white;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5;
+}
+
+.stripe #payment-form {
+	margin-top: 2rem;
+}
+
+.stripe button {
+  float: right;
+  display: block;
+  background: #171717;
+  color: white;
+  border-radius: 8px;
+  border: 0;
+  font-size: 14px;
+  font-weight: 420;
+  max-width: 40%;
+  height: 40px;
+  line-height: 38px;
+  outline: none;
+}
+
+.stripe .group {
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.stripe label {
+  position: relative;
+  color: #8898AA;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 20px;
+  display: block;
+}
+
+.stripe .group label:not(:last-child) {
+  border-bottom: 1px solid #F0F5FA;
+}
+
+.stripe label>span {
+  width: 20%;
+  float: left;
+  color: #525252;
+  font-size: 13px;
+  font-weight: 420;
+  letter-spacing: 0.02em;
+}
+
+.current-card {
+	margin-left: 20px;
+}
+
+.field {
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  font-weight: 420;
+  width: 70%;
+  float: right;
+  border: none;
+  height: 28px;
+  padding: 6px 8px;
+  color: #383838;
+  background: #f3f3f3;
+  background-clip: padding-box;
+}
+
+.field::-webkit-input-placeholder {
+  color: #CFD7E0;
+}
+
+.field::-moz-placeholder {
+  color: #CFD7E0;
+}
+
+.field:-ms-input-placeholder {
+  color: #CFD7E0;
+}
