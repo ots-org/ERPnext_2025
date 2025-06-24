@@ -1,0 +1,35 @@
+# Frappe Bench specific
+/sites
+/logs
+/config
+/locks
+
+# Python virtual environment
+/env
+
+# Node.js dependencies
+/node_modules
+
+# Assets
+/assets/css
+/assets/js
+/assets/frappe
+/assets/erpnext
+
+# User uploaded files
+/public/files
+
+# Temporary files and logs
+*.pyc
+*.pyo
+__pycache__
+*.log
+*.error.log
+*.socketio.log
+*.web.log
+*.worker.log
+*.schedule.log
+
+# Other
+.DS_Store
+*.swp
