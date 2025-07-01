@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2016-01-27 14:59:47.849379",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "section_break_ackd",
+  "company",
+  "branch",
+  "department",
+  "column_break_bhny",
+  "employment_type",
+  "designation",
+  "employee_grade",
+  "attendance_details_section",
+  "shift",
+  "late_entry",
+  "early_exit",
+  "unmarked_attendance_section",
+  "status",
+  "unmarked_employees_html",
+  "half_day_attendance_section",
+  "half_day_status",
+  "half_marked_employees_html",
+  "marked_attendance_section",
+  "marked_attendance_html"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:false",
+   "description": "Select employees and attendance status",
+   "fieldname": "unmarked_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Unmarked Employees"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "date",
+   "fieldname": "marked_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Marked Attendance"
+  },
+  {
+   "fieldname": "marked_attendance_html",
+   "fieldtype": "HTML",
+   "label": "Marked Attendance HTML"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPresent\nAbsent\nHalf Day\nWork From Home"
+  },
+  {
+   "collapsible": 1,
+   "description": "Set filters to fetch employees",
+   "fieldname": "section_break_ackd",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "depends_on": "date",
+   "fieldname": "attendance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Set Attendance Details"
+  },
+  {
+   "fieldname": "column_break_bhny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_entry",
+   "fieldtype": "Check",
+   "label": "Late Entry"
+  },
+  {
+   "default": "0",
+   "fieldname": "early_exit",
+   "fieldtype": "Check",
+   "label": "Early Exit"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "employee_grade",
+   "fieldtype": "Link",
+   "label": "Employee Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "unmarked_employees_html",
+   "fieldtype": "HTML",
+   "label": "Unmarked Employees HTML",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:false",
+   "description": "Select employees and status for other half (attendance status is \"Half Day\" as created from leave application)",
+   "fieldname": "half_day_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Employees on Half Day"
+  },
+  {
+   "fieldname": "half_marked_employees_html",
+   "fieldtype": "HTML",
+   "label": "Employees on Half Day HTML"
+  },
+  {
+   "fieldname": "half_day_status",
+   "fieldtype": "Select",
+   "label": "Status for Other Half",
+   "options": "Present\nAbsent"
+  }
+ ],
+ "grid_page_length": 50,
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-05-13 14:19:39.329723",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Employee Attendance Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
